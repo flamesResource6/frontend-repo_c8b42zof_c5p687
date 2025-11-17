@@ -9,7 +9,7 @@ const colorMap = {
 }
 
 const Pill = ({ children, color = 'blue' }) => (
-  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${colorMap[color]}`}>{children}</span>
+  <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-medium border ${colorMap[color]}`}>{children}</span>
 )
 
 export default function About() {
@@ -22,12 +22,12 @@ export default function About() {
   ]
 
   return (
-    <section className="bg-white rounded-2xl shadow-lg p-6">
-      <h2 className="text-xl font-semibold text-gray-900">About</h2>
-      <p className="mt-3 text-gray-600 leading-relaxed">
+    <section className="bg-white rounded-2xl shadow-lg p-4">
+      <h2 className="text-lg font-semibold text-gray-900">About</h2>
+      <p className="mt-2 text-gray-600 leading-relaxed text-sm">
         Frontend engineer with experience in React, Vue, Angular, and TypeScript. Passionate about performance optimization and building scalable frontend applications with Tailwind CSS and modern tooling.
       </p>
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-3 flex flex-wrap gap-2">
         {tags.map((t) => (
           <Pill key={t.label} color={t.color}>{t.label}</Pill>
         ))}
